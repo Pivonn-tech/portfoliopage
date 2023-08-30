@@ -1,0 +1,333 @@
+/* Reset some default styles */
+b body,
+h1,
+h2,
+h3,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Basic styling */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #fdcb92, #a4d4b0);
+  margin: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #333;
+}
+
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+/*Styles for the navigation bar */
+.navbar {
+  background: linear-gradient(to right, #e8c7a9, #92a9a0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 1rem;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar-logo a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.navbar-logo img {
+  max-width: 100px;
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-menu li {
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-menu li a:hover {
+  color: #ff9900;
+  text-decoration: underline;
+}
+
+/* Add a media query for mobile responsiveness */
+@media (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    margin-top: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.section {
+  padding: 4rem 0;
+  text-align: center;
+  color: #333;
+}
+.section-title {
+  font-size: 2.5rem;
+  color: #333; /* Adjust color */
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #777; /* Adjust color */
+}
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.about-text {
+  flex: 1;
+  margin-left: 2rem;
+  color: #333;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ff9900;
+}
+
+.skill-list {
+  list-style: disc;
+  margin-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.skill-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Style for portfolio items */
+.project {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.project:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project img {
+  max-width: 200px;
+  margin-right: 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.project-details {
+  flex: 1;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.project-details p {
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.project-link {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.project-link:hover {
+  background-color: #ff9900;
+}
+
+/* Style for contact form */
+#contact {
+  background-color: #f0f0f0;
+  padding: 4rem 0;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.contact-form-container {
+  background-color: white;
+  border-radius: 10px;
+  padding: 3rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+}
+
+.contact-form-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-form-description {
+  color: #777;
+  margin-bottom: 2rem;
+}
+
+.contact-form-button {
+  background-color: #ff9900;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-form-button:hover {
+  background-color: #e57d00;
+}
+
+/*Styles for the form input fields */
+.form-input {
+  margin-bottom: 1.5rem;
+}
+
+.form-input label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.form-input input,
+.form-input textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.form-input textarea {
+  resize: vertical;
+}
+
+/* Animation for revealing elements */
+.hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+/*Styles for the Connect with Me section */
+#social-media {
+  background-color: #333;
+  color: white;
+  padding: 4rem 0;
+}
+
+.connect-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 800px; /* Adjust as needed */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.connect-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.connect-link {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #ff9900;
+  transition: color 0.3s;
+}
+
+.connect-link:hover {
+  color: #e57d00;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+}
