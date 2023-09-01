@@ -13,7 +13,7 @@ Welcome to my creative and interactive landing page project! This landing page i
 
 ## Demo
 
-You can check out the live demo of the landing page [here](https://pivonn-tech.github.io/simple-landing-page/).
+You can check out the live demo of the landing page [here](https://pivonn-tech.github.io/Responsiveportfoliopage/).
 
 ## Features
 
