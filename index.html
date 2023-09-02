@@ -3,26 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link rel="stylesheet" href="all.min.css" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
     <title>Pivon - Freelance Developer</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="navbar-logo">
-          <a href="#home"><img src="logo.jpg" alt="Your Logo" /></a>
+          <a href="#home" class="menu-icon"><i class="fas fa-bars"></i></a>
+          <a href="#home">Logo</a>
         </div>
+
         <ul class="navbar-menu">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="#about"><i class="fas fa-info-circle"></i> About Me</a>
+          </li>
+          <li>
+            <a href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
+          </li>
         </ul>
       </nav>
+      
+
     </header>
     <section id="about" class="section">
       <div class="section-heading">
@@ -60,29 +71,38 @@
         <p class="section-subtitle">Turning Ideas into Beautiful Creations</p>
       </div>
       <div class="project">
-        <img src="project1.jpg" alt="Project 1" />
+        <img src="techdoc.jpg" alt="Technical Documentation Page Project" />
         <div class="project-details">
-          <h3 class="project-title">Project 1: Checklist Website</h3>
+          <h3 class="project-title">Technical Documentation Page Project</h3>
           <p>
-            A responsive checklistwebsite built using HTML, CSS, and
-            JavaScript...
+            Crafted an interactive technical documentation page with engaging
+            visuals and informative content to make complex information easy to
+            understand.
           </p>
-          <a href="/storage/emulated/0/Pivon Projects/checklist.html" class="project-link">View Project</a>
+          <a
+            href="https://pivonn-tech.github.io/documentationpage/"
+            class="project-link"
+            >View Project</a
+          >
         </div>
       </div>
+
       <div class="project">
-        <img src="project2.jpg" alt="Project 2" />
+        <img src="surveyform.jpg" alt="Survey Form Project" />
         <div class="project-details">
-          <h3 class="project-title">Project 1</h3>
+          <h3 class="project-title">Survey Form Project</h3>
           <p>
-            Ad mollit consectetur eu laborum eiusmod magna pariatur do excepteur
-            enim incididunt. Ea magna elit do veniam fugiat reprehenderit
-            exercitation ipsum. Ea est magna esse deserunt incididunt magna
-            nostrud consequat dolor consequat esse veniam cillum non.
+            Designed a captivating survey form with a user-friendly interface,
+            utilizing HTML and CSS to enhance the user experience.
           </p>
-          <a href="#" class="project-link">View Project</a>
+          <a
+            href="https://pivonn-tech.github.io/surveryform/"
+            class="project-link"
+            >View Project</a
+          >
         </div>
       </div>
+
       <div class="project">
         <img src="project2.jpg" alt="Project 2" />
         <div class="project-details">
@@ -155,14 +175,21 @@
       </div>
       <div class="connect-content">
         <div class="connect-links">
-          <a href="#" class="connect-link">Facebook</a>
-          <a href="#" class="connect-link">Twitter</a>
-          <a href="#" class="connect-link">LinkedIn</a>
-          <a href="#" class="connect-link">GitHub</a>
+          <a href="https://facebook.com/yourprofile" class="connect-link"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a href="https://twitter.com/yourusername" class="connect-link"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <a href="https://linkedin.com/in/yourprofile" class="connect-link"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <a href="https://github.com/yourusername" class="connect-link"
+            ><i class="fab fa-github"></i
+          ></a>
         </div>
       </div>
     </section>
-
     <footer>
       <div class="footer-content">
         <p>&copy; 2023 Pivon. All rights reserved.</p>

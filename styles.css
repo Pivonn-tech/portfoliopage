@@ -39,26 +39,72 @@ header {
   margin-right: 1rem;
 }
 
-/*Styles for the navigation bar */
+/* Styles for the navigation bar with improved text arrangement */
 .navbar {
-  background: linear-gradient(to right, #e8c7a9, #92a9a0);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(
+    to right,
+    #758a99,
+    #576b7b
+  ); /* Muted gradient background */
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: white;
   padding: 1rem;
   font-family: "Raleway", sans-serif;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+/* Style for nav icons */
+.navbar-menu li {
+  position: relative;
+  margin-right: 20px; /* Adjust the spacing between icons and text */
+}
+
+.navbar-menu li a {
+  text-decoration: none;
+  color: #333; /* Adjust icon color */
+  font-size: 20px; /* Adjust icon size */
+}
+
+.navbar-menu li a i {
+  margin-right: 5px; /* Adjust spacing between icon and text */
+}
+
+/* Hover effect for icons */
+.navbar-menu li a:hover {
+  color: #ff9900; /* Adjust hover color */
+  transform: translateY(-2px);
+}
+
+/* Add a transition effect for smoother hover */
+.navbar-menu li a {
+  transition: color 0.3s, transform 0.3s;
+}
+
+/* Style for the menu icon */
+.menu-icon {
+  font-size: 24px; /* Adjust the size as needed */
+  color: #333; /* Adjust the color */
+  padding: 10px; /* Add padding around the icon */
+}
+
+.navbar-logo {
+  display: flex; /* Align logo and menu icon horizontally */
+  align-items: center; /* Vertically center logo and menu icon */
 }
 
 .navbar-logo a {
   text-decoration: none;
   font-size: 1.8rem;
   font-weight: bold;
-  color: #fff;
-}
-
-.navbar-logo img {
-  max-width: 100px;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for catchiness */
+  margin-right: 1rem; /* Add spacing between logo and menu icon */
 }
 
 .navbar-menu {
@@ -68,13 +114,15 @@ header {
 }
 
 .navbar-menu li {
-  font-size: 1.2rem;
+  font-size: 1.4rem; /* Larger font size for link text */
   transition: color 0.3s;
 }
 
 .navbar-menu li a {
   text-decoration: none;
   color: white;
+  position: relative; /* To add a bottom border on hover */
+  font-weight: bold; /* Make the link text bold */
 }
 
 .navbar-menu li a:hover {
@@ -82,17 +130,31 @@ header {
   text-decoration: underline;
 }
 
-/* Add a media query for mobile responsiveness */
+/* Add a border at the bottom of the menu items on hover */
+.navbar-menu li a:hover::before {
+  content: "";
+  position: absolute;
+  bottom: -3px; /* Adjust as needed */
+  left: 0;
+  width: 100%;
+  height: 2px; /* Thickness of the border */
+  background-color: #ff9900;
+}
+
+/* Media query for mobile responsiveness */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: column;
-    align-items: center;
+  .navbar {
+    background: linear-gradient(
+      to right,
+      #758a99,
+      #576b7b
+    ); /* Muted gradient background */
+    text-align: center;
   }
 
-  nav ul {
-    margin-top: 1rem;
+  .navbar-menu {
     flex-direction: column;
-    text-align: center;
+    gap: 1rem;
   }
 }
 
@@ -299,14 +361,14 @@ header {
   justify-content: center;
   align-items: center;
   max-width: 800px; /* Adjust as needed */
-    margin: 0 auto; /* Center horizontally */
+  margin: 0 auto; /* Center horizontally */
 }
 
 .connect-links {
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  text-align: center;
+  gap: 1rem; /* Add spacing between icons */
+  justify-content: center; /* Center icons horizontally */
+  align-items: center; /* Center icons vertically */
 }
 
 .connect-link {
@@ -315,6 +377,18 @@ header {
   color: #ff9900;
   transition: color 0.3s;
 }
+
+.connect-link i {
+  font-size: 2rem; /* Adjust the icon size as needed */
+  color: #ff9900; /* Adjust the icon color */
+  transition: color 0.3s, transform 0.3s; /* Add color and transform transitions on hover */
+}
+
+.connect-link i:hover {
+  color: #e57d00; /* Change the icon color on hover */
+  transform: scale(1.2); /* Scale the icon slightly on hover for an attractive effect */
+}
+
 
 .connect-link:hover {
   color: #e57d00;
