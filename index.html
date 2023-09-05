@@ -8,15 +8,22 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
-    <link rel="stylesheet" href="all.min.css" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
     <title>Pivon - Freelance Developer</title>
   </head>
   <body>
     <header>
       <nav class="navbar">
         <div class="navbar-logo">
-          <a href="#home" class="menu-icon"><i class="fas fa-bars"></i></a>
+          <div class="menu-icon">
+            <i class="fas fa-bars"></i>
+          </div>
           <a href="#home">Logo</a>
         </div>
 
@@ -32,8 +39,6 @@
           </li>
         </ul>
       </nav>
-      
-
     </header>
     <section id="about" class="section">
       <div class="section-heading">
@@ -45,26 +50,60 @@
         <div class="about-text">
           <h2>Hello, I'm Pivon</h2>
           <p class="highlight">
-            Passionate about crafting delightful digital experiences that leave
-            a lasting impression...
+            Crafting Delightful Digital Experiences that Leave a Lasting
+            Impression
           </p>
           <p>
-            I'm a freelance developer specializing in creating user-centered
-            websites and applications...
+            I'm not just a developer; I'm a digital dreamweaver, an explorer of
+            endless possibilities, and a problem solver in the world of coding.
+            My journey into the realm of web development began with curiosity
+            and a passion for turning ideas into captivating digital realities.
           </p>
-          <p>My skills include:</p>
+          <p>
+            Over the years, I've honed my skills and expertise, specializing in
+            creating exceptional user experiences. My work goes beyond lines of
+            code; it's a fusion of technology and artistry. I believe that every
+            pixel, every interaction, and every design choice should serve a
+            purpose and evoke emotions.
+          </p>
+          <p>
+            My mission is to create user-centered websites and applications that
+            not only function flawlessly but also tell a story, evoke emotions,
+            and leave an indelible mark on users. I believe that the web is not
+            just about code; it's a canvas for innovation and artistry.
+          </p>
+          <p>
+            When I'm not immersed in the digital realm, you can find me
+            exploring the latest web trends, experimenting with new
+            technologies, and seeking inspiration from various forms of art. I
+            thrive on challenges and am constantly pushing the boundaries of
+            what's possible in web development.
+          </p>
+          <p>My Skills Include:</p>
           <ul class="skill-list">
-            <li>Responsive Web Design</li>
-            <li>Front-end Development</li>
-            <li>JavaScript and jQuery</li>
-            <li>UI/UX Design Principles</li>
+            <li><i class="fas fa-desktop"></i> Responsive Web Design</li>
+            <li><i class="fas fa-code"></i> Front-end Development</li>
+            <li><i class="fas fa-magic"></i> JavaScript and jQuery Magic</li>
+            <li><i class="fas fa-paint-brush"></i> UI/UX Design Principles</li>
+            <li>
+              <i class="fas fa-server"></i> Back-end Development (Node.js and
+              Express)
+            </li>
+            <li>
+              <i class="fas fa-database"></i> Database Design (SQL and NoSQL)
+            </li>
+            <li>
+              <i class="fas fa-code-branch"></i> Version Control (Git and
+              GitHub)
+            </li>
           </ul>
           <p class="highlight">
-            Let's collaborate and bring your ideas to life!
+            Let's Collaborate and Bring Your Ideas to Life!
           </p>
         </div>
       </div>
     </section>
+
     <section id="portfolio" class="section">
       <div class="section-heading">
         <h1 class="section-title">My Work</h1>
@@ -73,17 +112,24 @@
       <div class="project">
         <img src="techdoc.jpg" alt="Technical Documentation Page Project" />
         <div class="project-details">
-          <h3 class="project-title">Technical Documentation Page Project</h3>
-          <p>
-            Crafted an interactive technical documentation page with engaging
-            visuals and informative content to make complex information easy to
-            understand.
-          </p>
-          <a
-            href="https://pivonn-tech.github.io/documentationpage/"
-            class="project-link"
-            >View Project</a
-          >
+          <div class="modal" id="techdoc-modal">
+            <div class="modal-content">
+              <h3 class="modal-title">Technical Documentation Page Project</h3>
+              <p>
+                Crafted an interactive technical documentation page with
+                engaging visuals and informative content to make complex
+                information easy to understand.
+              </p>
+
+              <a
+                href="https://pivonn-tech.github.io/documentationpage/"
+                class="project-link"
+                target="_blank"
+                rel="noopener noreferrer"
+                >View Project Online</a
+              >
+            </div>
+          </div>
         </div>
       </div>
 
@@ -98,38 +144,103 @@
           <a
             href="https://pivonn-tech.github.io/surveryform/"
             class="project-link"
-            >View Project</a
+            target="_blank"
+            rel="noopener noreferrer"
+            >View Project Online</a
           >
         </div>
       </div>
 
       <div class="project">
-        <img src="project2.jpg" alt="Project 2" />
+        <img src="landingpage.jpg" alt="Landing Page Project" />
         <div class="project-details">
-          <h3 class="project-title">Project 1</h3>
+          <h3 class="project-title">Landing Page</h3>
           <p>
-            Ad mollit consectetur eu laborum eiusmod magna pariatur do excepteur
-            enim incididunt. Ea magna elit do veniam fugiat reprehenderit
-            exercitation ipsum. Ea est magna esse deserunt incididunt magna
-            nostrud consequat dolor consequat esse veniam cillum non.
+            Step into a world of captivating design and seamless user experience
+            with our striking Landing Page creation. Immerse yourself in the
+            artistry of digital storytelling as we present your brand with
+            elegance and purpose.
           </p>
-          <a href="#" class="project-link">View Project</a>
+          <a
+            href="https://pivonn-tech.github.io/landingpage/"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            View Project Online
+          </a>
         </div>
       </div>
+
       <div class="project">
-        <img src="project2.jpg" alt="Project 2" />
+        <div class="image-gallery">
+          <div class="gallery-item">
+            <img src="light-mode.jpg" alt="Light Mode" class="gallery-image" />
+            <p class="gallery-caption">Light Mode</p>
+          </div>
+          <div class="gallery-item">
+            <img src="dark-mode.jpg" alt="Dark Mode" class="gallery-image" />
+            <p class="gallery-caption">Dark Mode</p>
+          </div>
+        </div>
         <div class="project-details">
-          <h3 class="project-title">Project</h3>
+          <h3 class="project-title">
+            Interactive Checklist with Night and Dark Modes
+          </h3>
           <p>
-            Ad mollit consectetur eu laborum eiusmod magna pariatur do excepteur
-            enim incididunt. Ea magna elit do veniam fugiat reprehenderit
-            exercitation ipsum. Ea est magna esse deserunt incididunt magna
-            nostrud consequat dolor consequat esse veniam cillum non.
+            Elevate your productivity with our Interactive Checklist – a dynamic
+            tool designed to make task management a breeze. This user-friendly
+            checklist offers more than just checkboxes; it comes with a twist!
+            Seamlessly switch between Light and Dark Modes to suit your
+            workflow, day or night.
           </p>
-          <a href="#" class="project-link">View Project</a>
+
+          <a
+            href="https://pivonn-tech.github.io/checklist/"
+            class="project-link"
+            target="_blank"
+            rel="noopener noreferrer"
+            >View Project Online</a
+          >
         </div>
       </div>
+
       <!-- Add more project divs as needed -->
+    </section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="section">
+      <div class="section-heading">
+        <h1 class="section-title">Certifications</h1>
+        <p class="section-subtitle">Achievements and Recognitions</p>
+      </div>
+      <div class="certifications-content">
+        <!-- FreeCodeCamp Responsive Web Design Certification (sample) -->
+        <div class="certification">
+          <img
+            src="certificate.png"
+            alt="FreeCodeCamp Responsive Web Design Certification"
+          />
+          <div class="certification-details">
+            <h3 class="certification-title">
+              FreeCodeCamp Responsive Web Design
+            </h3>
+            <p class="certification-description">
+              Certified in Responsive Web Design by FreeCodeCamp, demonstrating
+              proficiency in creating responsive and user-friendly websites.
+            </p>
+            <!-- You can add a link to your FreeCodeCamp certification here -->
+            <a
+              href="https://www.freecodecamp.org/certification/fcc27f25621-ba1a-467b-b838-c25783929106/responsive-web-design"
+              class="certification-link"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Certification
+            </a>
+          </div>
+        </div>
+        <!-- Add more certifications as needed -->
+      </div>
     </section>
     <section id="contact" class="section">
       <div class="section-heading">
@@ -144,29 +255,27 @@
             together!
           </p>
           <form id="contact-form">
-            <div class="form-input">
-              <label for="name">Your Name</label>
-              <input type="text" id="name" name="name" required />
-            </div>
-            <div class="form-input">
-              <label for="email">Your Email</label>
-              <input type="email" id="email" name="email" required />
-            </div>
-            <div class="form-input">
-              <label for="message">Your Message</label>
-              <textarea
-                id="message"
-                name="message"
-                rows="4"
-                required
-              ></textarea>
-            </div>
-            <button type="submit" class="contact-form-button">
-              Send Message
-            </button>
-          </form>
-        </div>
+      <div class="form-input">
+           <label for="name"><i class="fas fa-user"></i>Your Name</label>
+  <input type="text" id="name" name="name" required />
+     </div>
+<div class="form-input">
+  <label for="email"><i class="fas fa-envelope"></i>Your Email</label>
+  <input type="email" id="email" name="email" required />
+</div>
+<div class="form-input">
+  <label for="phone"><i class="fas fa-phone"></i>Your Phone (optional)</label>
+  <input type="text" id="phone" name="phone" />
+  <small>Provide your phone number if you prefer to be contacted by phone.</small>
+</div>
+<div class="form-input">
+  <label for="message"><i class="fas fa-comment"></i>Your Message</label>
+  <textarea id="message" name="message" rows="4" required></textarea>
+</div>
       </div>
+         <button type="submit" class="contact-form-button">
+          Send Message <i class="fas fa-paper-plane"></i>
+        </button>
     </section>
     <section id="social-media" class="section">
       <div class="section-heading">
@@ -175,10 +284,10 @@
       </div>
       <div class="connect-content">
         <div class="connect-links">
-          <a href="https://facebook.com/yourprofile" class="connect-link"
+          <a href="https://facebook.com/pivonx.ayuxh" class="connect-link"
             ><i class="fab fa-facebook"></i
           ></a>
-          <a href="https://twitter.com/yourusername" class="connect-link"
+          <a href="https://twitter.com/onnlypivon" class="connect-link"
             ><i class="fab fa-twitter"></i
           ></a>
           <a href="https://linkedin.com/in/yourprofile" class="connect-link"

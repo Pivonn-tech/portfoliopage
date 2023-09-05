@@ -61,3 +61,44 @@ portfolioItems.forEach(item => {
         // Example: createModal(item);
     });
 });
+
+// JavaScript for toggling the navigation menu on smaller screens
+const menuIcon = document.querySelector('.menu-icon');
+const navbarMenu = document.querySelector('.navbar-menu');
+
+menuIcon.addEventListener('click', () => {
+  // Toggle the "active" class on the menu icon
+  menuIcon.classList.toggle('active');
+
+  // Toggle the display of the navigation menu
+  if (navbarMenu.style.display === 'flex') {
+    navbarMenu.style.display = 'none';
+  } else {
+    navbarMenu.style.display = 'flex';
+  }
+});
+
+// Get the modal element and the close button
+const techDocModal = document.getElementById('techDocModal');
+const closeButton = document.querySelector('.close');
+
+// Get the project item that corresponds to the Technical Documentation Page Project
+const techDocProject = document.querySelector('.tech-doc-project');
+
+// Add a click event listener to the Technical Documentation Project item
+techDocProject.addEventListener('click', () => {
+  // Show the modal when the project item is clicked
+  techDocModal.style.display = 'block';
+});
+
+// Close the modal when the close button is clicked
+closeButton.addEventListener('click', () => {
+  techDocModal.style.display = 'none';
+});
+
+// Close the modal when the user clicks anywhere outside the modal
+window.addEventListener('click', (event) => {
+  if (event.target === techDocModal) {
+    techDocModal.style.display = 'none';
+  }
+});

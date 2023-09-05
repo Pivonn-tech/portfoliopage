@@ -1,5 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 /* Reset some default styles */
-b body,
 h1,
 h2,
 h3,
@@ -12,7 +12,7 @@ li {
 
 /* Basic styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   background: linear-gradient(to bottom, #fdcb92, #a4d4b0);
   margin: 0;
 }
@@ -21,14 +21,6 @@ header {
   background-color: #333;
   color: white;
   padding: 1rem;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
-  background-color: #333;
 }
 
 .profile-image {
@@ -58,6 +50,53 @@ header {
   font-family: "Raleway", sans-serif;
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+/* Media query for screens with a maximum width of 768 pixels */
+@media (max-width: 768px) {
+  .navbar {
+    /* Adjust the styles for smaller screens */
+    background: #333; /* Change background color */
+    padding: 0.5rem; /* Reduce padding for a more compact layout */
+  }
+
+  /* Styles for the menu icon on smaller screens */
+  .menu-icon {
+    font-size: 24px;
+    color: white;
+  }
+
+  /* Styles for the navigation menu on smaller screens */
+  .navbar-menu {
+    display: none; /* Hide the menu by default */
+    flex-direction: column;
+    background: #333;
+    position: absolute;
+    top: 60px; /* Adjust the top position based on your design */
+    right: 0;
+    left: 0;
+  }
+
+  /* Styles for each menu item on smaller screens */
+  .navbar-menu li {
+    margin-right: 0; /* Remove the margin between items */
+    text-align: center;
+  }
+
+  /* Show the menu when the menu icon is clicked */
+
+  /* Adjust styles for links in the menu on smaller screens */
+  .navbar-menu li a {
+    color: white;
+    font-size: 16px;
+    padding: 10px 0; /* Adjust spacing between items */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Add a subtle separator */
+    text-decoration: none;
+  }
+
+  /* Hover effect for links in the menu */
+  .navbar-menu li a:hover {
+    background: #444; /* Adjust the hover background color */
+  }
 }
 /* Style for nav icons */
 .navbar-menu li {
@@ -164,51 +203,88 @@ header {
   color: #333;
 }
 .section-title {
+  font-family: "Poppins", Arial, sans-serif; /* Apply the custom font */
+  font-weight: 600; /* Adjust font weight as needed */
   font-size: 2.5rem;
-  color: #333; /* Adjust color */
+  color: #ff9900; /* Adjust the title color */
   margin-bottom: 0.5rem;
 }
 
 .section-subtitle {
+  font-family: "Poppins", Arial, sans-serif; /* Apply the custom font */
+  font-weight: 400; /* Adjust font weight as needed */
   font-size: 1.2rem;
-  color: #777; /* Adjust color */
-}
-.about-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 4rem;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto; /* Center horizontally */
+  color: #777; /* Adjust the subtitle color */
 }
 
+/* Add subtle animations */
+/* Add animation to the profile image */
+.profile-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+  animation: pulse 2s infinite alternate;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+/* Add a creative background to the about-text */
 .about-text {
   flex: 1;
   margin-left: 2rem;
   color: #333;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.about-text h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
+/* Add a subtle border animation to the highlighted text */
 .highlight {
   font-weight: bold;
-  color: #ff9900;
+  color: black;
+  animation: border-glow 3s infinite alternate;
+}
+
+@keyframes border-glow {
+  0% {
+    text-shadow: 0 0 10px #ff9900;
+  }
+  100% {
+    text-shadow: 0 0 20px #ff9900;
+  }
 }
 
 .skill-list {
-  list-style: disc;
-  margin-left: 1.5rem;
-  margin-top: 1rem;
+  list-style: none;
+  padding: 0;
 }
 
 .skill-list li {
-  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+  background-color: #ff9900; /* Background color for each skill */
+  color: white; /* Text color */
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.skill-list li:hover {
+  background-color: #e57d00; /* Adjust hover background color */
+  transform: scale(1.1); /* Add a scale effect on hover */
+  cursor: pointer;
 }
 
 /* Style for portfolio items */
@@ -235,6 +311,31 @@ header {
   border-radius: 10px;
 }
 
+/* Style the image gallery */
+.image-gallery {
+  max-width: 100%;
+  overflow-y: scroll; /* Enable vertical scrolling */
+  max-height: 400px; /* Set a maximum height for the gallery */
+  margin-bottom: 10px;
+}
+
+.gallery-item {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style the captions */
+.gallery-caption {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Style the project details as needed */
 .project-details {
   flex: 1;
 }
@@ -263,60 +364,37 @@ header {
 .project-link:hover {
   background-color: #ff9900;
 }
-
-/* Style for contact form */
-#contact {
-  background-color: #f0f0f0;
-  padding: 4rem 0;
+/*Contact section styling*/
+/* Section heading */
+.contact-content .section-heading {
+  margin-bottom: 2rem;
 }
 
-.contact-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 800px; /* Adjust as needed */
-  margin: 0 auto; /* Center horizontally */
-}
-
+/* Contact form container */
 .contact-form-container {
-  background-color: white;
+  background-color: #fff;
   border-radius: 10px;
   padding: 3rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
   max-width: 600px;
+  margin: 0 auto;
 }
 
+/* Contact form title */
 .contact-form-title {
   font-size: 2rem;
   color: #333;
   margin-bottom: 1rem;
 }
 
+/* Contact form description */
 .contact-form-description {
   color: #777;
   margin-bottom: 2rem;
 }
 
-.contact-form-button {
-  background-color: #ff9900;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form-button:hover {
-  background-color: #e57d00;
-}
-
-/*Styles for the form input fields */
-.form-input {
-  margin-bottom: 1.5rem;
-}
-
+/* Form input labels */
 .form-input label {
   display: block;
   font-size: 1.2rem;
@@ -324,6 +402,14 @@ header {
   color: #333;
 }
 
+/* Form input icons */
+.form-input i {
+  margin-right: 5px;
+  font-size: 1.2rem;
+  color: #ff9900;
+}
+
+/* Form input fields */
 .form-input input,
 .form-input textarea {
   width: 100%;
@@ -334,20 +420,39 @@ header {
   color: #333;
 }
 
+/* Textarea resize property */
 .form-input textarea {
   resize: vertical;
 }
 
-/* Animation for revealing elements */
-.hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+/* Send Message button */
+.contact-form-button {
+  background-color: #ff9900;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.2rem; /* Increase font size for better readability */
+  font-weight: bold; /* Add a bold font weight */
+  text-transform: uppercase; /* Uppercase text for emphasis */
 }
 
-.visible {
-  opacity: 1;
-  transform: translateY(0);
+.contact-form-button:hover {
+  background-color: #e57d00;
+}
+
+/* Send icon */
+.contact-form-button i {
+  margin-left: 5px;
+}
+
+/* Center the form on smaller screens */
+@media (max-width: 768px) {
+  .contact-form-container {
+    text-align: center;
+  }
 }
 /*Styles for the Connect with Me section */
 #social-media {
@@ -386,12 +491,67 @@ header {
 
 .connect-link i:hover {
   color: #e57d00; /* Change the icon color on hover */
-  transform: scale(1.2); /* Scale the icon slightly on hover for an attractive effect */
+  transform: scale(
+    1.2
+  ); /* Scale the icon slightly on hover for an attractive effect */
 }
-
 
 .connect-link:hover {
   color: #e57d00;
+}
+
+/* Style for the Certifications section */
+#certifications {
+  background-color: #f9f9f9; /* Background color for the Certifications section */
+  padding: 4rem 0;
+}
+
+.certifications-content {
+  display: flex;
+  flex-wrap: wrap; /* Ensure certifications wrap to the next row on smaller screens */
+  justify-content: center;
+  max-width: 1200px; /* Adjust as needed */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.certification {
+  width: 300px; /* Adjust certification card width */
+  margin: 1rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+}
+
+.certification img {
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+
+.certification-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.certification-description {
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.certification-link {
+  display: inline-block;
+  background-color: #333;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.certification-link:hover {
+  background-color: #ff9900;
 }
 
 footer {
