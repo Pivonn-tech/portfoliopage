@@ -1,3 +1,4 @@
+const { Analytics } = require('@vercel/analytics');
 // Smooth scrolling for navigation links
 const navLinks = document.querySelectorAll("nav a");
 
