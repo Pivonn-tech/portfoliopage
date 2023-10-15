@@ -24,7 +24,7 @@ My skills include:
 - JavaScript
 - Responsive Web Design
 - Web Accessibility
-- Front-End Frameworks (if applicable)
+- Front-End Frameworks
 
 ## Contact Me ✉️
 
